@@ -55,37 +55,59 @@ int main()
 
     // Read this input and print the sum of integers (if the elemts are integers) or print the length of longest word if the elemts are strings.
 
+    // int t;
+    // cin>>t;
+    // for(int i=0;i<t;i++)
+    // {
+    //     int n;
+    //     string type;
+    //     cin>>n>>type;
+    //     if(type =="STRING")
+    //     {
+    //         string arr[n];
+    //         for(int j=0;j<n;j++)
+    //         {
+    //             cin>>arr[j];
+    //         }
+    //         int maxlen=0;
+    //         for(int j=0;j<n;j++)
+    //         {
+    //             maxlen=max(maxlen,(int)arr[j].length());
+    //         }
+    //         cout<<maxlen<<endl;
+    //     }
+    //     else if(type=="INT")
+    //     {
+    //         int arr[n];
+    //         for(int j=0;j<n;j++)
+    //         {
+    //             cin>>arr[j];
+    //         }
+    //         cout<<accumulate(arr,arr+n,0)<<endl;
+    //     }
+        
+    // }
+
+    // You are given pass and fails status of N students. You need to find the count of students who have a pass status and have marks greater than 75 and also find the count of studnets who ahve a fail status and have amrks less than 50
+
     int t;
     cin>>t;
+    int p=0,f=0;
     for(int i=0;i<t;i++)
     {
         int n;
-        string type;
-        cin>>n>>type;
-        if(type =="STRING")
-        {
-            string arr[n];
-            for(int j=0;j<n;j++)
-            {
-                cin>>arr[j];
-            }
-            int maxlen=0;
-            for(int j=0;j<n;j++)
-            {
-                maxlen=max(maxlen,(int)arr[j].length());
-            }
-            cout<<maxlen<<endl;
-        }
-        else if(type=="INT")
-        {
-            int arr[n];
-            for(int j=0;j<n;j++)
-            {
-                cin>>arr[j];
-            }
-            cout<<accumulate(arr,arr+n,0)<<endl;
-        }
         
+        string status;
+        cin>>status>>n;
+        if(status =="Pass" && n>75)
+        {
+            p=p+1;
+        }
+        else if(status=="Fail" && n<50)
+        {
+            f=f+1;
+        }
+          
     }
-
+    cout<<p<<" "<<f<<endl; 
 }
